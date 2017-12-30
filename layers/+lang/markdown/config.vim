@@ -11,5 +11,5 @@
 " }
 
 " markdown-preview.vim {
-  let g:mkdp_path_to_chrome = g:spacevim#plug#markdown#PathToChrome
+  let g:mkdp_path_to_chrome = "open firefox "
 " }

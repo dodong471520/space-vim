@@ -35,3 +35,4 @@
   nnoremap <Leader>fr :CtrlPMRU<CR>
   nnoremap <C-p> :CtrlP<CR>
 " }
+"

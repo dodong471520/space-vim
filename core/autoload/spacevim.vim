@@ -251,7 +251,13 @@ function! s:post_user_config()
     let g:airline_right_sep=''
 
     if !g:WINDOWS
-      let g:airline_synbols = g:spacevim#plug#airline#symbols
+      let g:airline_symbols = {}
+      let g:airline_symbols.linenr = '␊'
+      let g:airline_symbols.linenr = '␤'
+      let g:airline_symbols.linenr = '¶'
+      let g:airline_symbols.branch = '⎇'
+      let g:airline_symbols.paste = 'Þ'
+      let g:airline_symbols.whitespace = 'Ξ'
     endif
   endif
   " }

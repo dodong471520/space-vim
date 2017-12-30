@@ -13,6 +13,4 @@ augroup loadNerdtree
 augroup END
 
 MP 'Xuyuanp/nerdtree-git-plugin', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
-
-" Disable vim-nerdtree-syntax-highlight for the performance consideration, see #237
-" MP 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }
+MP 'tiagofumo/vim-nerdtree-syntax-highlight', { 'on': ['NERDTreeToggle', 'NERDTreeFind'] }

@@ -20,12 +20,14 @@ else
 
   nnoremap <Leader>ag :Ag<CR>
   nnoremap <Leader>bb :Buffers<CR>
+  nnoremap <Leader>tag :Tags<cr>
 
   nnoremap <Leader>b? :Buffers<CR>
   nnoremap <Leader>w? :Windows<CR>
-  nnoremap <Leader>f? :Files<CR>
+  nnoremap <Leader>ff :Files<CR>
+  nnoremap <Leader>fl :BLines<CR>
 
-  nnoremap <Leader>ff :Files ~<CR>
+  nnoremap <Leader>f? :Files ~<CR>
   " }
 
   " fzf-filemru {

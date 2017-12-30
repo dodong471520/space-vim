@@ -9,6 +9,19 @@ function! Layers()
   Layer 'fzf'
   Layer 'unite'
   Layer 'better-defaults'
+  Layer 'file-manager'
+"  Layer 'ctrlp'
+  Layer 'code-snippets'
+  Layer 'editing'
+  Layer 'programming'
+  Layer 'auto-completion'
+  Layer 'c-c++'
+  Layer 'html'
+  Layer 'markdown'
+  Layer 'goyo'
+  Layer 'better-motion'
+  Layer 'text-align'
+  Layer 'tmux'
 
 endfunction
 
@@ -22,9 +35,15 @@ function! UserInit()
   " The default local leader key is comma.
   " Uncomment the line below and modify ',' if you prefer another
   " let g:spacevim_localleader = ','
-
-  " Install personal plugins
+"
+  " Install personal plugins"
   " Plug 'hecal3/vim-leader-guide'
+  Plug 'mattn/webapi-vim'
+  Plug 'skywind3000/quickmenu.vim'
+  "custom
+  imap <c-o> <ESC>o
+  imap <c-s-o> <esc><s-o>
+  set tags=tags,/usr/local/go/tags
 
 endfunction
 

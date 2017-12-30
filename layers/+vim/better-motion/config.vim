@@ -12,7 +12,7 @@ map <Leader><Leader> <Plug>(easymotion-prefix)
 " Consistent with spacemacs
 " <Leader>f{char} to move to {char}
 map  <Leader>jj <Plug>(easymotion-bd-f)
-nmap <Leader>jj <Plug>(easymotion-overwin-f)
+nmap <Leader>jj <Plug>(easymotion-overwin-f2)
 
 " s{char}{char} to move to {char}{char}
 nmap <Leader>jJ <Plug>(easymotion-overwin-f2)

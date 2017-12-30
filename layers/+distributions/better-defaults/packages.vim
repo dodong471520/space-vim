@@ -37,15 +37,7 @@ if has('patch-8.0.1238')
 else
   MP 'google/vim-searchindex'
   if !g:spacevim_nvim
-    MP 'haya14busa/incsearch.vim',       { 'on': [
-                \ '<Plug>(incsearch-forward)',
-                \ '<Plug>(incsearch-backward)',
-                \ '<Plug>(incsearch-stay)' ]
-                \ }
-    MP 'haya14busa/incsearch-fuzzy.vim',  { 'on': [
-                \ '<Plug>(incsearch-fuzzy-/)',
-                \ '<Plug>(incsearch-fuzzy-?)',
-                \ '<Plug>(incsearch-fuzzy-stay)' ]
-                \ }
+    MP 'haya14busa/incsearch.vim'
+    MP 'haya14busa/incsearch-fuzzy.vim'
   endif
 endif

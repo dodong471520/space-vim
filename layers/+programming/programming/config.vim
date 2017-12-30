@@ -21,7 +21,28 @@ augroup END
 
 " rainbow {
   let g:rainbow_active = 1
-  let g:rainbow_conf = g:spacevim#plug#rainbow#conf
+  let g:rainbow_conf = {
+              \   'guifgs': ['#4F97D7', '#D75F87', '#D697E6', '#40AF81', '#DA61AE', '#70AF67'],
+              \   'ctermfgs': ['68', '168', '176', '104', '73', '212'],
+              \   'operators': '_,_',
+              \   'parentheses': ['start=/(/ end=/)/ fold', 'start=/\[/ end=/\]/ fold', 'start=/{/ end=/}/ fold'],
+              \   'separately': {
+              \       '*': {},
+              \       'tex': {
+              \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/'],
+              \       },
+              \       'lisp': {
+              \           'guifgs': ['royalblue3', 'darkorange3', 'seagreen3', '#FF69B4', '#DDA0DD', '#F08080', '#FF8C00', '#20B2AA'],
+              \       },
+              \       'vim': {
+              \           'parentheses': ['start=/(/ end=/)/', 'start=/\[/ end=/\]/', 'start=/{/ end=/}/ fold', 'start=/(/ end=/)/ containedin=vimFuncBody', 'start=/\[/ end=/\]/ containedin=vimFuncBody', 'start=/{/ end=/}/ fold containedin=vimFuncBody'],
+              \       },
+              \       'html': {
+              \           'parentheses': ['start=/\v\<((area|base|br|col|embed|hr|img|input|keygen|link|menuitem|meta|param|source|track|wbr)[ >])@!\z([-_:a-zA-Z0-9]+)(\s+[-_:a-zA-Z0-9]+(\=("[^"]*"|'."'".'[^'."'".']*'."'".'|[^ '."'".'"><=`]*))?)*\>/ end=#</\z1># fold'],
+              \       },
+              \       'css': 0,
+              \   }
+              \}
 " }
 
 " rainbow_parentheses.vim {
@@ -37,6 +58,33 @@ augroup END
   inoremap <F6> <ESC>:TagbarToggle<CR>
   nnoremap <Leader>tt :TagbarToggle<CR>
   let g:tagbar_sort = 0
+  let g:tagbar_type_go = {
+    \ 'ctagstype' : 'go',
+    \ 'kinds'     : [
+        \ 'p:package',
+        \ 'i:imports:1',
+        \ 'c:constants',
+        \ 'v:variables',
+        \ 't:types',
+        \ 'n:interfaces',
+        \ 'w:fields',
+        \ 'e:embedded',
+        \ 'm:methods',
+        \ 'r:constructor',
+        \ 'f:functions'
+    \],
+    \ 'sro' : '.',
+    \ 'kind2scope' : {
+        \ 't' : 'ctype',
+        \ 'n' : 'ntype'
+    \},
+    \ 'scope2kind' : {
+        \ 'ctype' : 't',
+        \ 'ntype' : 'n'
+    \},
+    \ 'ctagsbin'  : 'gotags',
+    \ 'ctagsargs' : '-sort -silent'
+  \}
 " }
 
 " asyncrun.vim {
@@ -48,8 +96,8 @@ augroup END
 " }
 
 " indentLine {
-  let g:indentLine_char='¦'
-  let g:indentLine_enabled=1
+        let g:indentLine_char='¦'
+        let g:indentLine_enabled=1
   let g:indentLine_color_term=239
   let g:indentLine_color_gui = '#4A9586'
   let g:indentLine_concealcursor='vc'      " default 'inc'
@@ -67,9 +115,4 @@ augroup END
 " vim-polyglot {
   " Reset errorformat to its default value for cooperating with asyncrun.vim
   autocmd BufEnter * set errorformat&
-" }
-
-" vim-rooter {
-  " To stop vim-rooter echoing the project directory
-  let g:rooter_silent_chdir = 1
 " }
