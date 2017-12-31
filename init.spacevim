@@ -41,9 +41,8 @@ function! UserInit()
   Plug 'mattn/webapi-vim'
   Plug 'skywind3000/quickmenu.vim'
   "custom
-  imap <c-o> <ESC>o
-  imap <c-s-o> <esc><s-o>
   set tags=tags,/usr/local/go/tags
+  set wrap
 
 endfunction
 

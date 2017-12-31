@@ -11,7 +11,7 @@ scriptencoding utf-8
   let g:UltiSnipsJumpBackwardTrigger = '<C-k>'
 
   " Fix tab conflict with YCM
-  let g:UltiSnipsExpandTrigger = '<C-e>'
+  let g:UltiSnipsExpandTrigger = '<C-o>'
   let g:ulti_expand_or_jump_res = 0
   function! ExpandSnippetOrCarriageReturn()
     let l:snippet = UltiSnips#ExpandSnippetOrJump()

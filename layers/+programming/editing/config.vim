@@ -26,3 +26,8 @@ scriptencoding utf-8
   nnoremap <Leader>ss :call Swoop()<CR>
   nnoremap <Leader>sm :call SwoopMulti()<CR>
 " }
+
+" auto-pairs {
+  let g:AutoPairsMapBS = 0
+
+" }
