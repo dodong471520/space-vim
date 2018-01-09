@@ -28,3 +28,5 @@ MP 'Yggdroot/indentLine',             { 'on': 'IndentLinesToggle' }
 MP 'nathanaelkane/vim-indent-guides', { 'on': 'IndentGuidesToggle' }
 
 MP 'skywind3000/asyncrun.vim',        { 'on': ['AsyncRun!', 'AsyncRun'] }
+
+MP 'vim-scripts/Asciitable.vim'
