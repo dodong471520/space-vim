@@ -9,5 +9,5 @@ elseif g:spacevim_vim8
   MP 'maralla/completor.vim'
   MP 'maralla/completor-neosnippet'
 else
-  MP 'lifepillar/vim-mucomplete'
+  MP 'dodong471520/vim-mucomplete'
 endif

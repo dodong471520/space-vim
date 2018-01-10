@@ -41,8 +41,10 @@ function! UserInit()
   Plug 'mattn/webapi-vim'
   Plug 'skywind3000/quickmenu.vim'
   "custom
-  set tags=tags,/usr/local/go/tags
-  set wrap
+  " set tags=tags,/usr/local/go/tags
+  " Plug 'vim-script/getutils'
+  " Plug 'albfan/vim-breakpts'
+  Plug 'dodong471520/Asciitable.vim'
 
 endfunction
 
