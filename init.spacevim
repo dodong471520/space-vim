@@ -42,11 +42,12 @@ function! UserInit()
   Plug 'skywind3000/quickmenu.vim'
   "custom
   " set tags=tags,/usr/local/go/tags
-  " Plug 'vim-script/getutils'
+  " Plug 'vim-scripts/genutils'
   " Plug 'albfan/vim-breakpts'
   Plug 'dodong471520/Asciitable.vim'
 
 endfunction
+
 
 " Override the default settings as well as adding extras
 function! UserConfig()
