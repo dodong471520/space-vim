@@ -45,6 +45,8 @@ function! UserInit()
   " Plug 'vim-scripts/genutils'
   " Plug 'albfan/vim-breakpts'
   Plug 'dodong471520/Asciitable.vim'
+  Plug 'vim-scripts/Conque-GDB'
+  " Plug 'aceofall/gtags.vim'
 
 endfunction
 
