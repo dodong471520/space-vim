@@ -18,6 +18,7 @@ else
   xmap <Leader>? <plug>(fzf-maps-x)
   omap <Leader>? <plug>(fzf-maps-o)
 
+  " nnoremap <Leader>wg :Ag -w<CR>
   nnoremap <Leader>ag :Ag<CR>
   nnoremap <Leader>bb :Buffers<CR>
   nnoremap <Leader>tag :Tags<cr>

@@ -47,9 +47,19 @@ function! UserInit()
   Plug 'dodong471520/Asciitable.vim'
   Plug 'dodong471520/Conque-GDB'
   " Plug 'aceofall/gtags.vim'
+  " Plug 'dodong471520/ifdef-highlighting'
 
 endfunction
 
+function! ReloadTags_Go()
+  if exists("g:have_go_tags")
+    return
+  endif
+  let g:have_go_tags=1
+  let l:oldtags=&tags
+  let l:oldtags=l:oldtags.",".$GOROOT."/src/tags".",".$GOPATH."/src/tags"
+  let &tags=l:oldtags
+endfunction
 
 " Override the default settings as well as adding extras
 function! UserConfig()
@@ -67,5 +77,10 @@ function! UserConfig()
       let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
     endif
   endif
+
+  " go
+  " gotags -R /root/go/src >/root/go/src/tags
+  " gotags -R /usr/local/go/src >/usr/local/go/src/tags
+  autocmd! filetype go :call ReloadTags_Go()
 
 endfunction
