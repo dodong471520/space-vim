@@ -48,6 +48,8 @@ function! UserInit()
   Plug 'dodong471520/Conque-GDB'
   " Plug 'aceofall/gtags.vim'
   " Plug 'dodong471520/ifdef-highlighting'
+  Plug 'vim-scripts/hexman.vim'
+  Plug 'vim-scripts/hexsearch.vim'
 
 endfunction
 
@@ -82,5 +84,6 @@ function! UserConfig()
   " gotags -R /root/go/src >/root/go/src/tags
   " gotags -R /usr/local/go/src >/usr/local/go/src/tags
   autocmd! filetype go :call ReloadTags_Go()
+  map <leader>ee :e /mnt/hgfs/C/work/GameClient/Assets/Scripts/Lua/Controller/Equip/EquipCtrl.lua<cr>
 
 endfunction

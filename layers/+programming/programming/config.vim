@@ -42,10 +42,10 @@ augroup END
               \       },
               \       'css': 0,
               \       'c': {
-              \           'parentheses': ['start=/\v(#ifdef|#ifundef|#if)/ step=/\v(#else|#elif)/ end=/#endif/'],
+              \           'parentheses': ['start=/\v(#ifdef|#ifndef|#if)/ step=/\v(#else|#elif)/ end=/#endif/'],
               \       },
               \       'cpp': {
-              \           'parentheses': ['start=/\v(#ifdef|#ifundef|#if)/ step=/\v(#else|#elif)/ end=/#endif/'],
+              \           'parentheses': ['start=/\v(#ifdef|#ifndef|#if)/ step=/\v(#else|#elif)/ end=/#endif/'],
               \       },
               \   }
               \}

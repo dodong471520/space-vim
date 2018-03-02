@@ -10,6 +10,8 @@ scriptencoding utf-8
   let g:NERDTreeIgnore=[
               \ '\.py[cd]$', '\~$', '\.swo$', '\.swp$', '\.DS_Store$',
               \ '^\.git$', '^\.hg$', '^\.svn$', '\.bzr$',
+              \ '\.o$[[FILE]]','\.lo$[[FILE]]',
+              \ '\.meta$[[FILE]]',
               \ ]
   " close vim if the only window left open is a NERDTree
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
