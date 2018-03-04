@@ -85,5 +85,7 @@ function! UserConfig()
   " gotags -R /usr/local/go/src >/usr/local/go/src/tags
   autocmd! filetype go :call ReloadTags_Go()
   map <leader>ee :e /mnt/hgfs/C/work/GameClient/Assets/Scripts/Lua/Controller/Equip/EquipCtrl.lua<cr>
+  nnoremap <leader>d :ConqueGdb<cr><cr>a
+  set magic
 
 endfunction
