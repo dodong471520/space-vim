@@ -19,14 +19,14 @@ else
   omap <Leader>? <plug>(fzf-maps-o)
 
   " nnoremap <Leader>wg :Ag -w<CR>
-  nnoremap <Leader>ag :Ag<CR>
+  nnoremap <Leader>ag :Ag expand("<cword>")<cr>
   nnoremap <Leader>bb :Buffers<CR>
-  nnoremap <Leader>tag :Tags<cr>
+  nnoremap <Leader>tag :Tags expand("<cword>")<cr>
 
   nnoremap <Leader>b? :Buffers<CR>
   nnoremap <Leader>w? :Windows<CR>
   nnoremap <Leader>ff :Files<CR>
-  nnoremap <Leader>fl :BLines<CR>
+  nnoremap <Leader>fl :BLines expand("<cword>")<CR>
 
   nnoremap <Leader>f? :Files ~<CR>
   " }
