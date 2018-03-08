@@ -59,10 +59,12 @@ augroup END
 " }
 
 " tagbar {
-  let g:tagbar_autofocus = 1
+  let g:tagbar_autofocus = 0
+  let g:tagbar_autoshowtag = 1
   nnoremap <F6> :TagbarToggle<CR>
   inoremap <F6> <ESC>:TagbarToggle<CR>
   nnoremap <Leader>tt :TagbarToggle<CR>
+  nnoremap <Leader>tf :TagbarShowTag<CR>
   let g:tagbar_sort = 0
   let g:tagbar_type_go = {
     \ 'ctagstype' : 'go',
