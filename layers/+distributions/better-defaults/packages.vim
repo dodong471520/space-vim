@@ -3,7 +3,7 @@
 " endif
 
 if g:spacevim_timer
-  MP 'kshenoy/vim-signature'        , { 'on': [] }
+  MP 'dodong471520/vim-signature'        , { 'on': [] }
   MP 'tpope/vim-rsi'                , { 'on': [] }
   MP 't9md/vim-choosewin'           , { 'on': [] }
   MP 'dominikduda/vim_current_word' , { 'on': [] }
@@ -11,7 +11,7 @@ if g:spacevim_timer
 else
   MP 'tpope/vim-rsi'
   MP 't9md/vim-choosewin'
-  MP 'kshenoy/vim-signature'
+  MP 'dodong471520/vim-signature'
   MP 'dominikduda/vim_current_word'
 endif
 
@@ -35,7 +35,7 @@ if has('patch-8.0.1238')
   MP 'haya14busa/is.vim'
   MP 'osyo-manga/vim-anzu', { 'on': ['<Plug>(anzu-n-with-echo)', '<Plug>(anzu-N-with-echo)'] }
 else
-  MP 'google/vim-searchindex'
+  MP 'dodong471520/vim-searchindex'
   if !g:spacevim_nvim
     MP 'haya14busa/incsearch.vim'
     MP 'haya14busa/incsearch-fuzzy.vim'
