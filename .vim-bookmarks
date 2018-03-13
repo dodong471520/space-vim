@@ -1,0 +1,3 @@
+let l:bm_file_version = 1
+let l:bm_sessions = {'default': {'/root/.spacevim': [{'sign_idx': 9501, 'line_nr': 100, 'content': '    let g:bookmark_disable_ctrlp = 1'},],}}
+let l:bm_current_session = 'default'
