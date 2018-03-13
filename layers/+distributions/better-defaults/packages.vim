@@ -3,7 +3,7 @@
 " endif
 
 if g:spacevim_timer
-  MP 'dodong471520/vim-signature'        , { 'on': [] }
+  " MP 'dodong471520/vim-signature'        , { 'on': [] }
   MP 'tpope/vim-rsi'                , { 'on': [] }
   MP 't9md/vim-choosewin'           , { 'on': [] }
   MP 'dominikduda/vim_current_word' , { 'on': [] }
@@ -11,7 +11,7 @@ if g:spacevim_timer
 else
   MP 'tpope/vim-rsi'
   MP 't9md/vim-choosewin'
-  MP 'dodong471520/vim-signature'
+  " MP 'dodong471520/vim-signature'
   MP 'dominikduda/vim_current_word'
 endif
 

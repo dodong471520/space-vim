@@ -5,87 +5,101 @@ let g:spacevim_plug_home = '~/.vim/plugged'
 " Enable the existing layers in space-vim
 function! Layers()
 
-  " Default layers
-  Layer 'fzf'
-  Layer 'unite'
-  Layer 'better-defaults'
-  Layer 'file-manager'
-"  Layer 'ctrlp'
-  Layer 'code-snippets'
-  Layer 'editing'
-  Layer 'programming'
-  Layer 'auto-completion'
-  Layer 'c-c++'
-  Layer 'html'
-  Layer 'markdown'
-  Layer 'goyo'
-  Layer 'better-motion'
-  Layer 'text-align'
-  Layer 'tmux'
+    " Default layers
+    Layer 'fzf'
+    Layer 'unite'
+    Layer 'better-defaults'
+    Layer 'file-manager'
+    "  Layer 'ctrlp'
+    Layer 'code-snippets'
+    Layer 'editing'
+    Layer 'programming'
+    Layer 'auto-completion'
+    Layer 'c-c++'
+    Layer 'html'
+    Layer 'markdown'
+    Layer 'goyo'
+    Layer 'better-motion'
+    Layer 'text-align'
+    Layer 'tmux'
 
 endfunction
 
 " Add your own plugins
 function! UserInit()
 
-  " The default leader key is space key.
-  " Uncomment the line below and modify "<\Space>" if you prefer another
-  " let g:spacevim_leader = "<\Space>"
+    " The default leader key is space key.
+    " Uncomment the line below and modify "<\Space>" if you prefer another
+    " let g:spacevim_leader = "<\Space>"
 
-  " The default local leader key is comma.
-  " Uncomment the line below and modify ',' if you prefer another
-  " let g:spacevim_localleader = ','
-"
-  " Install personal plugins"
-  " Plug 'hecal3/vim-leader-guide'
-  Plug 'mattn/webapi-vim'
-  Plug 'skywind3000/quickmenu.vim'
-  "custom
-  " set tags=tags,/usr/local/go/tags
-  " Plug 'vim-scripts/genutils'
-  " Plug 'albfan/vim-breakpts'
-  Plug 'dodong471520/Asciitable.vim'
-  Plug 'dodong471520/Conque-GDB'
-  " Plug 'aceofall/gtags.vim'
-  " Plug 'dodong471520/ifdef-highlighting'
-  Plug 'vim-scripts/hexman.vim'
-  Plug 'vim-scripts/hexsearch.vim'
+    " The default local leader key is comma.
+    " Uncomment the line below and modify ',' if you prefer another
+    " let g:spacevim_localleader = ','
+    "
+    " Install personal plugins"
+    " Plug 'hecal3/vim-leader-guide'
+    Plug 'mattn/webapi-vim'
+    Plug 'skywind3000/quickmenu.vim'
+    "custom
+    " set tags=tags,/usr/local/go/tags
+    " Plug 'vim-scripts/genutils'
+    " Plug 'albfan/vim-breakpts'
+    Plug 'dodong471520/Asciitable.vim'
+    Plug 'dodong471520/Conque-GDB'
+    " Plug 'aceofall/gtags.vim'
+    " Plug 'dodong471520/ifdef-highlighting'
+    Plug 'vim-scripts/hexman.vim'
+    Plug 'vim-scripts/hexsearch.vim'
+    Plug 'dodong471520/vim-bookmarks'
 
 endfunction
 
 function! ReloadTags_Go()
-  if exists("g:have_go_tags")
-    return
-  endif
-  let g:have_go_tags=1
-  let l:oldtags=&tags
-  let l:oldtags=l:oldtags.",".$GOROOT."/src/tags".",".$GOPATH."/src/tags"
-  let &tags=l:oldtags
+    if exists("g:have_go_tags")
+        return
+    endif
+    let g:have_go_tags=1
+    let l:oldtags=&tags
+    let l:oldtags=l:oldtags.",".$GOROOT."/src/tags".",".$GOPATH."/src/tags"
+    let &tags=l:oldtags
 endfunction
+
 
 " Override the default settings as well as adding extras
 function! UserConfig()
+    " If you have installed the powerline fonts and want to enable airline layer
+    " let g:airline_powerline_fonts=1
 
-  " If you have installed the powerline fonts and want to enable airline layer
-  " let g:airline_powerline_fonts=1
-
-  " Use gui colors in terminal if available
-  if has('termguicolors')
-    set termguicolors
-    if g:spacevim_tmux
-      " If use vim inside tmux, see https://github.com/vim/vim/issues/993
-      " set Vim-specific sequences for RGB colors
-      let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
-      let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+    " Use gui colors in terminal if available
+    if has('termguicolors')
+        set termguicolors
+        if g:spacevim_tmux
+            " If use vim inside tmux, see https://github.com/vim/vim/issues/993
+            " set Vim-specific sequences for RGB colors
+            let &t_8f = "\<Esc>[38;2;%lu;%lu;%lum"
+            let &t_8b = "\<Esc>[48;2;%lu;%lu;%lum"
+        endif
     endif
-  endif
 
-  " go
-  " gotags -R /root/go/src >/root/go/src/tags
-  " gotags -R /usr/local/go/src >/usr/local/go/src/tags
-  autocmd! filetype go :call ReloadTags_Go()
-  map <leader>ee :e /mnt/hgfs/C/work/GameClient/Assets/Scripts/Lua/Controller/Equip/EquipCtrl.lua<cr>
-  nnoremap <leader>d :ConqueGdb<cr><cr>a
-  set magic
+    " go
+    " gotags -R /root/go/src >/root/go/src/tags
+    " gotags -R /usr/local/go/src >/usr/local/go/src/tags
+    autocmd! filetype go :call ReloadTags_Go()
+    map <leader>ee :e /mnt/hgfs/C/work/GameClient/Assets/Scripts/Lua/Controller/Equip/EquipCtrl.lua<cr>
+    nnoremap <leader>d :ConqueGdb<cr><cr>a
+    set magic
+    " bookmark
+    " save viminfo 
+    " augroup save_viminfo
+        " autocmd!
+        " autocmd VimLeavePre * :wviminfo ~/viminfo
+    " augroup END
+    let g:bookmark_save_per_working_dir = 1
+    " let g:bookmark_manage_per_buffer = 1
+    let g:bookmark_center = 1
+    let g:bookmark_disable_ctrlp = 1
+    let g:bookmark_no_default_key_mappings = 0
+    let g:bookmark_location_list = 1
+
 
 endfunction
