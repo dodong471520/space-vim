@@ -64,6 +64,13 @@ function! ReloadTags_Go()
     let &tags=l:oldtags
 endfunction
 
+function! ConqueGdb_Focus()
+    exe 'ConqueGdb'
+    if !exists('g:conquegdb_oldwinheight')
+        let g:conquegdb_oldwinheight=winheight(0)/2
+        exe 'resize '. g:conquegdb_oldwinheight
+    endif
+endfunction
 
 " Override the default settings as well as adding extras
 function! UserConfig()
@@ -86,8 +93,12 @@ function! UserConfig()
     " gotags -R /usr/local/go/src >/usr/local/go/src/tags
     autocmd! filetype go :call ReloadTags_Go()
     map <leader>ee :e /mnt/hgfs/C/work/GameClient/Assets/Scripts/Lua/Controller/Equip/EquipCtrl.lua<cr>
-    nnoremap <leader>d :ConqueGdb<cr><cr>a
+
+    " gdb
+    let g:ConqueTerm_StartMessages = 0
+    nnoremap <leader>d :call ConqueGdb_Focus()<cr>
     set magic
+
     " bookmark
     " save viminfo 
     " augroup save_viminfo
