@@ -19,7 +19,7 @@ else
   omap <Leader>? <plug>(fzf-maps-o)
 
   " nnoremap <Leader>wg :Ag -w<CR>
-  nnoremap <Leader>ag :Ag expand("<cword>")<cr>
+  nnoremap <Leader>ag :Ag "-w ".expand("<cword>")<cr>
   nnoremap <Leader>bb :Buffers<CR>
   nnoremap <Leader>tag :Tags expand("<cword>")<cr>
 
