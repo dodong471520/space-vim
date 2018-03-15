@@ -17,7 +17,7 @@ function! Layers()
     Layer 'auto-completion'
     Layer 'c-c++'
     Layer 'html'
-    Layer 'markdown'
+    " Layer 'markdown'
     Layer 'goyo'
     Layer 'better-motion'
     Layer 'text-align'
@@ -51,6 +51,7 @@ function! UserInit()
     Plug 'vim-scripts/hexman.vim'
     Plug 'vim-scripts/hexsearch.vim'
     Plug 'dodong471520/vim-bookmarks'
+    Plug 'airblade/vim-gitgutter'
 
 endfunction
 
@@ -111,6 +112,12 @@ function! UserConfig()
     let g:bookmark_disable_ctrlp = 1
     let g:bookmark_no_default_key_mappings = 0
     let g:bookmark_location_list = 1
+
+    " gitgutter
+    set updatetime=400
+    nmap ghp <Plug>GitGutterPreviewHunk
+    " nmap ghs <Plug>GitGutterStageHunk
+    " nmap ghu <Plug>GitGutterUndoHunk
 
 
 endfunction
