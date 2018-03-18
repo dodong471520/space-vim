@@ -21,7 +21,7 @@ else
   " nnoremap <Leader>wg :Ag -w<CR>
   nnoremap <Leader>ag :Ag "-w ".expand("<cword>")<cr>
   nnoremap <Leader>bb :Buffers<CR>
-  nnoremap <Leader>tag :Tags expand("<cword>")<cr>
+  nnoremap <Leader>tl :Tags expand("<cword>")<cr>
 
   nnoremap <Leader>b? :Buffers<CR>
   nnoremap <Leader>w? :Windows<CR>

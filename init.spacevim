@@ -52,6 +52,7 @@ function! UserInit()
     Plug 'vim-scripts/hexsearch.vim'
     Plug 'dodong471520/vim-bookmarks'
     Plug 'airblade/vim-gitgutter'
+    " Plug 'dodong471520/ClassTree'
 
 endfunction
 
