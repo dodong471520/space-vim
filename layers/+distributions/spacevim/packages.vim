@@ -4,5 +4,5 @@ MP 'dodong471520/vim-better-default'
 
 
 if !spacevim#LayerLoaded('airline') && !spacevim#LayerLoaded('lightline')
-  MP 'liuchengxu/eleline.vim'
+  MP 'dodong471520/eleline.vim'
 endif
