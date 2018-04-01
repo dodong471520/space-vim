@@ -53,7 +53,8 @@ function! UserInit()
     Plug 'dodong471520/vim-bookmarks'
     Plug 'airblade/vim-gitgutter'
     " Plug 'dodong471520/ClassTree'
-    Plug 'vim-scripts/a.vim'
+    Plug 'dodong471520/a.vim'
+    " Plug 'kablamo/VimDebug',{'rtp': 'lib/Vim/Debug/_vim'}
 
 endfunction
 
