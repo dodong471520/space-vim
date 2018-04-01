@@ -25,13 +25,13 @@ else
   if !g:spacevim_nvim
     " incsearch.vim has bug with GUI vim
     if !g:spacevim_gui
-      map /  <Plug>(incsearch-easymotion-/)
-      map ?  <Plug>(incsearch-backward)
-      map g/ <Plug>(incsearch-stay)
+      " map /  <Plug>(incsearch-easymotion-/)
+      " map ?  <Plug>(incsearch-backward)
+      " map g/ <Plug>(incsearch-stay)
 
-      map z/ <Plug>(incsearch-fuzzyspell-/)
-      map z? <Plug>(incsearch-fuzzyspell-?)
-      map zg/ <Plug>(incsearch-fuzzyspell-stay)
+      " map z/ <Plug>(incsearch-fuzzyspell-/)
+      " map z? <Plug>(incsearch-fuzzyspell-?)
+      " map zg/ <Plug>(incsearch-fuzzyspell-stay)
     endif
   endif
 endif
