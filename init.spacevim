@@ -54,6 +54,7 @@ function! UserInit()
     Plug 'airblade/vim-gitgutter'
     " Plug 'dodong471520/ClassTree'
     Plug 'dodong471520/a.vim'
+    " todo:too cpu
     " Plug 'kablamo/VimDebug',{'rtp': 'lib/Vim/Debug/_vim'}
 
 endfunction
