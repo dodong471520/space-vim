@@ -103,6 +103,7 @@ function! UserConfig()
     let g:ConqueTerm_StartMessages = 0
     nnoremap <leader>d :call ConqueGdb_Focus()<cr>
     set magic
+    set noswapfile
 
     " bookmark
     " save viminfo 
