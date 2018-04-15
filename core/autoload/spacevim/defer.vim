@@ -9,7 +9,7 @@ function! spacevim#defer#git(timer) abort
 endfunction
 
 function! spacevim#defer#defaults(timer) abort
-  call plug#load('vim-signature')
+  " call plug#load('vim-signature')
   call plug#load('vim-rsi')
   call plug#load('vim-choosewin')
   call plug#load('vim_current_word')
