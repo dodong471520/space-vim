@@ -48,7 +48,7 @@ function! UserInit()
     " Plug 'dodong471520/Conque-GDB'
     " Plug 'aceofall/gtags.vim'
     " Plug 'dodong471520/ifdef-highlighting'
-    Plug 'vim-scripts/hexman.vim'
+    " Plug 'vim-scripts/hexman.vim'
     Plug 'vim-scripts/hexsearch.vim'
     Plug 'dodong471520/vim-bookmarks'
     Plug 'airblade/vim-gitgutter'
