@@ -2,7 +2,7 @@
 " Comment it out if you don't like
 let g:spacevim_plug_home = '~/.vim/plugged'
 
-set rtp+=~/git/ichizok/vim-perf
+" set rtp+=~/git/ichizok/vim-perf
 
 " call vimperf#setup()
 " call vimperf#start("result.out")
