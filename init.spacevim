@@ -2,6 +2,11 @@
 " Comment it out if you don't like
 let g:spacevim_plug_home = '~/.vim/plugged'
 
+set rtp+=~/git/ichizok/vim-perf
+
+" call vimperf#setup()
+" call vimperf#start("result.out")
+
 " Enable the existing layers in space-vim
 function! Layers()
 
@@ -24,6 +29,7 @@ function! Layers()
     Layer 'tmux'
 
 endfunction
+
 
 " Add your own plugins
 function! UserInit()
@@ -59,6 +65,7 @@ function! UserInit()
 
 endfunction
 
+
 function! ReloadTags_Go()
     if exists("g:have_go_tags")
         return
@@ -79,6 +86,7 @@ endfunction
 
 " Override the default settings as well as adding extras
 function! UserConfig()
+
 
     " If you have installed the powerline fonts and want to enable airline layer
     " let g:airline_powerline_fonts=1
@@ -125,4 +133,8 @@ function! UserConfig()
     " nmap ghs <Plug>GitGutterStageHunk
     " nmap ghu <Plug>GitGutterUndoHunk
 
+
 endfunction
+
+" call vimperf#stop()
+" call vimperf#finish()
