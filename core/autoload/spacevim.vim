@@ -170,7 +170,7 @@ function! s:register_plugin()
   try
     call UserInit()
   catch
-      call spacevim#util#err('Error occurs in UserInit()!')
+    call spacevim#util#err('Error occurs in UserInit()!')
   endtry
 
   call plug#end()
