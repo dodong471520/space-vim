@@ -18,3 +18,8 @@ MP 'airblade/vim-gitgutter'
 MP 'dodong471520/a.vim'
 " todo:too cpu
 " MP 'kablamo/VimDebug',{'rtp': 'lib/Vim/Debug/_vim'}
+" MP 'chrisbra/DynamicSigns'
+" MP 'vim-scripts/highlight.vim'
+" MP 'vim-scripts/CursorLineCurrentWindow'
+" MP 'vim-scripts/HiCurLine'
+
