@@ -19,8 +19,10 @@ endif
 " https://github.com/vim/vim/pull/2198
 " incsearch.vim {
 if has('patch-8.0.1238')
-  map n <Plug>(is-nohl)<Plug>(anzu-n-with-echo)
-  map N <Plug>(is-nohl)<Plug>(anzu-N-with-echo)
+  " map n <Plug>(is-nohl)<Plug>(anzu-n-with-echo)
+  " map N <Plug>(is-nohl)<Plug>(anzu-N-with-echo)
+  map n <Plug>(anzu-n-with-echo)
+  map N <Plug>(anzu-N-with-echo)
 else
   if !g:spacevim_nvim
     " incsearch.vim has bug with GUI vim
